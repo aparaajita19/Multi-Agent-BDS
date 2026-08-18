@@ -20,7 +20,7 @@ from utils.report_exporter import build_html_report, build_metrics_csv
 
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="Multi-Agent BDS",
+    page_title="Multi-Agent Business Decision Support System",
     page_icon="🤖",
     layout="wide",
     initial_sidebar_state="expanded",
