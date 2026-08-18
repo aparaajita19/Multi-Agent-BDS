@@ -28,16 +28,100 @@ st.set_page_config(
 
 st.markdown("""
 <style>
-.ag-card   { border:1.5px solid #dee2e6; border-radius:10px; padding:14px 12px;
-             text-align:center; transition:border-color .3s; }
-.ag-idle   { border-color:#dee2e6; }
-.ag-running{ border-color:#f0a500; background:#fffbf0; }
-.ag-done   { border-color:#28a745; background:#f0fff4; }
-.insight-panel { background:linear-gradient(135deg,#eef4ff 0%,#f5f0ff 100%);
-  border-left:5px solid #4f8ef7; border-radius:8px;
-  padding:20px 24px; font-size:15px; line-height:1.85; color:#1a1a2e; }
+
+/* ── Overall background ───────────────────────────── */
+.stApp {
+    background: linear-gradient(135deg, #f7f9ff 0%, #eef4ff 100%);
+}
+
+/* ── Sidebar ───────────────────────────────────────── */
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #172554 0%, #1e3a8a 100%);
+}
+
+[data-testid="stSidebar"] * {
+    color: white;
+}
+
+/* ── Agent cards ──────────────────────────────────── */
+.ag-card {
+    border: 1.5px solid #dbe4f0;
+    border-radius: 10px;
+    padding: 14px 12px;
+    text-align: center;
+    background: white;
+    box-shadow: 0 2px 8px rgba(30, 58, 138, 0.08);
+    transition: border-color .3s, transform .2s;
+}
+
+.ag-card:hover {
+    transform: translateY(-2px);
+}
+
+.ag-idle {
+    border-color: #cbd5e1;
+}
+
+.ag-running {
+    border-color: #f0a500;
+    background: #fffbf0;
+}
+
+.ag-done {
+    border-color: #28a745;
+    background: #f0fff4;
+}
+
+/* ── Insight panel ───────────────────────────────── */
+.insight-panel {
+    background: linear-gradient(135deg, #eef4ff 0%, #f5f0ff 100%);
+    border-left: 5px solid #4f8ef7;
+    border-radius: 8px;
+    padding: 20px 24px;
+    font-size: 15px;
+    line-height: 1.85;
+    color: #1a1a2e;
+    box-shadow: 0 3px 10px rgba(79, 142, 247, 0.12);
+}
+
+/* ── Main headings ───────────────────────────────── */
+h1 {
+    color: #1e3a8a !important;
+}
+
+h2, h3 {
+    color: #2563eb !important;
+}
+
+/* ── Buttons ──────────────────────────────────────── */
+.stButton > button {
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+/* ── Metrics ──────────────────────────────────────── */
+[data-testid="stMetric"] {
+    background: white;
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid #dbe4f0;
+    box-shadow: 0 2px 7px rgba(30, 58, 138, 0.08);
+}
+
+/* ── Dataframe ────────────────────────────────────── */
+[data-testid="stDataFrame"] {
+    border-radius: 8px;
+}
+
+/* ── Tabs ─────────────────────────────────────────── */
+button[data-baseweb="tab"] {
+    font-weight: 600;
+}
+
 </style>
 """, unsafe_allow_html=True)
+
+
 
 # ══════════════════════════════════════════════════════════════════════════════
 # SIDEBAR
