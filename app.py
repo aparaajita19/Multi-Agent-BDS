@@ -36,6 +36,21 @@ st.markdown("""
 .insight-panel { background:linear-gradient(135deg,#eef4ff 0%,#f5f0ff 100%);
   border-left:5px solid #4f8ef7; border-radius:8px;
   padding:20px 24px; font-size:15px; line-height:1.85; color:#1a1a2e; }
+/* Red to water green */
+div[data-baseweb="tag"] {
+  background-color: #20c7a5 !important;
+}
+
+div[data-baseweb="tag"] span,
+div[data-baseweb="tag"] svg {
+  color: white !important;
+  fill: white !important;
+}
+
+div[data-testid="stSlider"] [style*="rgb(255, 75, 75)"] {
+  color: #20c7a5 !important;
+  background-color: #20c7a5 !important;
+}
 </style>
 """, unsafe_allow_html=True)
 
